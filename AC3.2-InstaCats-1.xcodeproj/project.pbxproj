@@ -16,6 +16,7 @@
 		14CBA2D61DAC3FD7003A33FD /* InstaCats.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CBA2D51DAC3FD7003A33FD /* InstaCats.json */; };
 		14CBA2D81DACAD12003A33FD /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CBA2D71DACAD12003A33FD /* test.json */; };
 		14CBA2D91DACAFEB003A33FD /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CBA2D71DACAD12003A33FD /* test.json */; };
+		70C35EF01DC6F07600A759AD /* CatInstagramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C35EEF1DC6F07600A759AD /* CatInstagramTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		14CBA2D21DAC3D72003A33FD /* InstaCatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstaCatTableViewController.swift; path = "View Controllers/InstaCatTableViewController.swift"; sourceTree = "<group>"; };
 		14CBA2D51DAC3FD7003A33FD /* InstaCats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InstaCats.json; sourceTree = "<group>"; };
 		14CBA2D71DACAD12003A33FD /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		70C35EEF1DC6F07600A759AD /* CatInstagramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatInstagramTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				14CBA2B81DAC3AAB003A33FD /* Assets.xcassets */,
 				14CBA2BA1DAC3AAB003A33FD /* LaunchScreen.storyboard */,
 				14CBA2BD1DAC3AAB003A33FD /* Info.plist */,
+				70C35EEF1DC6F07600A759AD /* CatInstagramTableViewCell.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				14CBA2D31DAC3D72003A33FD /* InstaCatTableViewController.swift in Sources */,
 				14CBA2B21DAC3AAB003A33FD /* AppDelegate.swift in Sources */,
+				70C35EF01DC6F07600A759AD /* CatInstagramTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

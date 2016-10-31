@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6TC-qH-2IX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6TC-qH-2IX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,34 +11,46 @@
         <scene sceneID="CXg-pL-3If">
             <objects>
                 <tableViewController id="WQ4-MQ-qqv" customClass="InstaCatTableViewController" customModule="AC3_2_InstaCats_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lyS-5I-UyN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="lyS-5I-UyN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstaCatCellIdentifier" textLabel="5Ns-WD-jFT" detailTextLabel="jXp-Kw-I7o" style="IBUITableViewCellStyleSubtitle" id="JCR-5E-V2A">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstaCatCellIdentifier" rowHeight="99" id="JCR-5E-V2A" customClass="CatInstagramTableViewCell" customModule="AC3_2_InstaCats_1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JCR-5E-V2A" id="dnh-9w-bZa">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Ns-WD-jFT">
-                                            <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jXp-Kw-I7o">
-                                            <frame key="frameInset" minX="15" minY="25" width="44" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pS3-KZ-YFm">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="hVj-ud-1p8"/>
+                                                <constraint firstAttribute="width" constant="80" id="xEb-B5-nJF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-Bv-KjC">
+                                            <color key="tintColor" red="0.97639006376266479" green="0.98124736547470093" blue="0.93535894155502319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="22"/>
+                                            <color key="textColor" red="0.086088083684444427" green="0.61084985733032227" blue="0.71592897176742554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="topMargin" secondItem="9Kp-Bv-KjC" secondAttribute="top" id="1ny-dC-opa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9Kp-Bv-KjC" secondAttribute="bottom" constant="49" id="XPC-vD-vhd"/>
+                                        <constraint firstItem="9Kp-Bv-KjC" firstAttribute="leading" secondItem="pS3-KZ-YFm" secondAttribute="trailing" constant="8" id="dxd-xt-fcA"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="pS3-KZ-YFm" secondAttribute="leading" id="epX-gh-3Kk"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pS3-KZ-YFm" secondAttribute="bottom" constant="2" id="ljg-q2-2Wg"/>
+                                        <constraint firstAttribute="topMargin" secondItem="pS3-KZ-YFm" secondAttribute="top" id="n8q-7S-3iG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+                                <connections>
+                                    <outlet property="iGPhoto" destination="pS3-KZ-YFm" id="bfm-5l-QyA"/>
+                                    <outlet property="userName" destination="9Kp-Bv-KjC" id="Pdy-4i-ich"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZ5-o3-QWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="81"/>
+            <point key="canvasLocation" x="829.60000000000002" y="80.50974512743629"/>
         </scene>
         <!--InstaCats-->
         <scene sceneID="wYA-Lr-sUZ">
