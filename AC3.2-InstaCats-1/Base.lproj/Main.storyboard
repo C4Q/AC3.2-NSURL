@@ -11,13 +11,28 @@
         <scene sceneID="CXg-pL-3If">
             <objects>
                 <tableViewController id="WQ4-MQ-qqv" customClass="InstaCatTableViewController" customModule="AC3_2_InstaCats_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="lyS-5I-UyN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="99" sectionHeaderHeight="18" sectionFooterHeight="18" id="lyS-5I-UyN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.49770879745483398" green="0.73804908990859985" blue="0.73935359716415405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.84536397457122803" green="0.75777041912078857" blue="0.6818280816078186" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2G3-hj-VAi">
+                            <rect key="frame" x="0.0" y="64" width="375" height="62"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.83276563882827759" green="0.5845564603805542" blue="0.48944652080535889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <attributedString key="attributedText">
+                                <fragment content=" InstaCats">
+                                    <attributes>
+                                        <font key="NSFont" size="28" name="GillSans-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstaCatCellIdentifier" rowHeight="99" id="JCR-5E-V2A" customClass="CatInstagramTableViewCell" customModule="AC3_2_InstaCats_1" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="99"/>
+                                <rect key="frame" x="0.0" y="182" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JCR-5E-V2A" id="dnh-9w-bZa">
                                     <frame key="frameInset" width="375" height="98"/>
@@ -29,20 +44,30 @@
                                                 <constraint firstAttribute="width" constant="80" id="xEb-B5-nJF"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-Bv-KjC">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-Bv-KjC">
                                             <color key="tintColor" red="0.97639006376266479" green="0.98124736547470093" blue="0.93535894155502319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="22"/>
-                                            <color key="textColor" red="0.086088083684444427" green="0.61084985733032227" blue="0.71592897176742554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="IdcNY">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.49770879745483398" green="0.73804908990859985" blue="0.73935359716415405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="28" name="Futura-CondensedMedium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="topMargin" secondItem="9Kp-Bv-KjC" secondAttribute="top" id="1ny-dC-opa"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="9Kp-Bv-KjC" secondAttribute="bottom" constant="49" id="XPC-vD-vhd"/>
-                                        <constraint firstItem="9Kp-Bv-KjC" firstAttribute="leading" secondItem="pS3-KZ-YFm" secondAttribute="trailing" constant="8" id="dxd-xt-fcA"/>
+                                        <constraint firstItem="9Kp-Bv-KjC" firstAttribute="leading" secondItem="pS3-KZ-YFm" secondAttribute="trailing" constant="8" id="HTk-z4-Cee"/>
+                                        <constraint firstItem="9Kp-Bv-KjC" firstAttribute="top" relation="lessThanOrEqual" secondItem="dnh-9w-bZa" secondAttribute="topMargin" constant="23" id="Jeb-Ue-xKT"/>
+                                        <constraint firstItem="9Kp-Bv-KjC" firstAttribute="top" secondItem="dnh-9w-bZa" secondAttribute="topMargin" constant="23" id="LYe-Sg-SrO"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="pS3-KZ-YFm" secondAttribute="leading" id="epX-gh-3Kk"/>
+                                        <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="9Kp-Bv-KjC" secondAttribute="bottom" constant="25" id="ewZ-sY-whI"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="pS3-KZ-YFm" secondAttribute="bottom" constant="2" id="ljg-q2-2Wg"/>
                                         <constraint firstAttribute="topMargin" secondItem="pS3-KZ-YFm" secondAttribute="top" id="n8q-7S-3iG"/>
+                                        <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="9Kp-Bv-KjC" secondAttribute="trailing" constant="218.5" id="o4w-QU-Bzu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
