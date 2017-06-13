@@ -98,20 +98,21 @@ Each of the projects we've created, compile into a *self-encapsulated* applicati
 ```swift
     internal func getResourceURL(from fileName: String) -> URL? {
         
-        // 1. There are many ways of doing this parsing, we're going to practice String traversal
-        guard let dotRange = fileName.rangeOfCharacter(from: CharacterSet.init(charactersIn: ".")) else {
+        // 1. We'll assume that the String passed in will look like <file_name>.<file_extension>
+        let components = fileName.components(separatedBy: ".")
+
+        // 2. As long as our input string was formatted properly, we should get an array of string with
+        //    the element at [0] being the file's name and [1] being the extension
+        guard let fileName = components.first,
+            let fileExtension = components.last
+        else {
             return nil
         }
         
-        // 2. The upperbound of a range represents the position following the last position in the range, thus we can use it
-        // to effectively "skip" the "." for the extension range
-        let fileNameComponent: String = fileName.substring(to: dotRange.lowerBound)
-        let fileExtenstionComponent: String = fileName.substring(from: dotRange.upperBound)
-        
-        // 3. Here is where Bundle.main comes into play
-        let fileURL: URL? = Bundle.main.url(forResource: fileNameComponent, withExtension: fileExtenstionComponent)
-
-        return fileURL
+        // This function type looks like: 
+        // Bundle.url(forResource:withExtension:) -> URL? 
+        // So we can just return this line instead of assigning the result to a constant first
+        return Bundle.main.url(forResource: fileName, withExtension: fileExtension)
     }
 ```
 
@@ -122,14 +123,20 @@ Getting the `Data` contents of the file located at `fileURL` is fairly straightf
         
         // 1. this is a simple handling of a function that can throw. In this case, the code makes for a very short function
         // but it can be much larger if we change how we want to handle errors.
+        // Note that calling try? will return nil if it fails, rather than throwing an error.
         let fileData: Data? = try? Data(contentsOf: url)
         return fileData
     }
 ```
 
 ---
-### 4. Exercise
-Using the tests provided and following snippet of code (with hints), finish out the rest of this project so that you can parse out the data contained in `InstaCats.json` to create `[InstaCat` and output the info to the `InstaCatTableViewController` as pictured below:
+### 4. Exercises
+
+#### Using Tests
+
+1. This project comes with a small test suite. Ensure that your code passes the tests by uncommenting the tests for the sections of code you've written. (You can run tests by pressing `CMD + U`)
+
+2. Using the tests provided and following snippet of code (with hints), finish out the rest of this project so that you can parse out the data contained in `InstaCats.json` to create `[InstaCat]`.
 
 #### InstaCat Model:
 ```swift
@@ -154,5 +161,11 @@ Using the tests provided and following snippet of code (with hints), finish out 
     }
 ```
 
-#### Final Product:
-![Filling in the tableview](http://i.imgur.com/190RsUZm.png)
+3. Output the array of `[InstaCat]` to the `InstaCatTableViewController` as pictured below:
+![Filling in the tableview](.Images/instacats_1_exercise.png)
+
+#### Advanced Exercise:
+1. **String Traversal (Swift 3)**: Re-implement `getResourceURL(from fileName: String) -> URL?`. This time, use:
+    - `rangeOfCharacter(from:)` to get the index of the `.` in the string 
+    - `.substring(to:)` to get the string that represents the filename
+    - `.substring(from:)` to get the string that represents the file extension

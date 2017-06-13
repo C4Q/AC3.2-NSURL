@@ -14,8 +14,8 @@ class AC3_2_InstaCats_1Tests: XCTestCase {
     let testInstaCatTableVC: InstaCatTableViewController = InstaCatTableViewController()
     
     let testName: String = "Insta Cat"
-    let testID: Int = 99999
-    let testURL: URL = URL(string: "http://www.google.com")!
+    let testID: String = "99999"
+    let testURL: String = "http://www.google.com"
     
     let testFileName: String = "test.json"
     let invalidFileName: String = "testing.json"
@@ -50,11 +50,11 @@ class AC3_2_InstaCats_1Tests: XCTestCase {
 //        let testFileName: String = "test.json"
 //        let testFileURL = testInstaCatTableVC.getResourceURL(from: testFileName)
 //        XCTAssertNotNil(testFileURL, "getResourceURL(from:) should return a non-nil URL for a valid file")
-//        
+//
 //        let invalidFileName: String = "testing.json"
 //        let invalidTestFileURL = testInstaCatTableVC.getResourceURL(from: invalidFileName)
 //        XCTAssertNil(invalidTestFileURL, "getResourceURL(from:) should return nil for a file that does not exist")
-//        
+//
 //        let malformedFileName: String = "testedjson"
 //        let malformedFileURL = testInstaCatTableVC.getResourceURL(from: malformedFileName)
 //        XCTAssertNil(malformedFileURL, "getResourceURL(from:) should return nil for an improperly formatted filename parameter")
@@ -74,11 +74,11 @@ class AC3_2_InstaCats_1Tests: XCTestCase {
 //            XCTFail()
 //            return
 //        }
-//        
+//
 //        XCTAssertTrue(testFileInstaCats.count == 3)
 //        XCTAssertTrue(testFileInstaCats[0].name == "Nala Cat")
-//        XCTAssertTrue(testFileInstaCats[1].catID == 002)
-//        XCTAssertTrue(testFileInstaCats[2].instagramURL == URL(string: "https://www.instagram.com/grump_cat_/?hl=en"))
+//        XCTAssertTrue(testFileInstaCats[1].catID == "002")
+//        XCTAssertTrue(testFileInstaCats[2].instagramURL == "https://www.instagram.com/grump_cat_/?hl=en")
     }
 
 }
