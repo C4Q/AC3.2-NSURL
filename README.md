@@ -14,6 +14,10 @@ To understand the importance, purpose and usage of `URL`'s not only in code, but
 #### Further Readings:
 1. [`About the URL Loading System` - Apple](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html#//apple_ref/doc/uid/10000165i)
 
+#### Vocabulary
+1. Encapsulation - *In general, encapsulation is one of the four fundamentals of OOP (object-oriented programming). Encapsulation refers to the bundling of data with the methods that operate on that data.* - [Wikipedia](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
+2. Bundle - *A bundle is simply a self contained executable file. When you run it, it executes a main function that is defined inside, and uses only the resources that it contains.* - [Stackoverflow](https://stackoverflow.com/questions/10811375/what-is-the-bundle-in-the-objective-c)
+
 ---
 ### 1. Intro To `NSURL/URL`
 
