@@ -32,18 +32,11 @@ class AC3_2_InstaCats_1Tests: XCTestCase {
     }
     
     func testInitializerOfInstaCat() {
-//        let testInstaCat: InstaCat = InstaCat(name: testName, id: testID, instagramURL: testURL)
+//        let testInstaCat: InstaCat = InstaCat(name: testName, catID: testID, instagramURL: testURL)
 //        
 //        XCTAssertTrue(testInstaCat.name == testName)
 //        XCTAssertTrue(testInstaCat.catID == testID)
 //        XCTAssertTrue(testInstaCat.instagramURL == testURL)
-    }
-    
-    func testValidInstaCatDescription() {
-//        let testInstaCat: InstaCat = InstaCat(name: testName, id: testID, instagramURL: testURL)
-//        let expectedDescription: String = "Nice to me you, I'm \(testName)"
-//        
-//        XCTAssertTrue(testInstaCat.description == expectedDescription)
     }
     
     func testGetResourceURLFromFilename() {
