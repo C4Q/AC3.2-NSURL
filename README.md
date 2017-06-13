@@ -162,7 +162,7 @@ Getting the `Data` contents of the file located at `fileURL` is fairly straightf
 ```
 
 3. Output the array of `[InstaCat]` to the `InstaCatTableViewController` as pictured below:
-![Filling in the tableview](.Images/instacats_1_exercise.png)
+![Filling in the tableview](./Images/instacats_1_exercise.png)
 
 #### Advanced Exercise:
 1. **String Traversal (Swift 3)**: Re-implement `getResourceURL(from fileName: String) -> URL?`. This time, use:
