@@ -33,7 +33,7 @@ class AC3_2_InstaCats_1Tests: XCTestCase {
     
     func testInitializerOfInstaCat() {
         let testInstaCat: InstaCat = InstaCat(name: testName, catID: testID, instagramURL: testURL)
-        
+//
         XCTAssertTrue(testInstaCat.name == testName)
         XCTAssertTrue(testInstaCat.catID == testID)
         XCTAssertTrue(testInstaCat.instagramURL == testURL)
